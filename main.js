@@ -39,3 +39,33 @@ let todos = [
 //   getCurrentDateAndTime(),
 // ]
 
+function printTodo(name, date) {
+
+  const li = document.createElement('li');
+  
+  const ol = document.querySelector('.todo-list');
+  
+  const pTag = document.createElement('p');
+
+  const pTagTwo = document.createElement('p');
+
+  li.innerText = todos;
+
+  pTag.innerText = todos;
+
+  pTagTwo.innerText = todos;
+
+  ol.appendChild(li);
+
+}
+
+function printAllTodo() {
+  for(let i = 0; i < todos.length; i++){
+  
+  printTodo(todos[i][0]);
+  }
+
+}
+
+printAllTodo();
+
