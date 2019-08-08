@@ -40,7 +40,6 @@ let todos = [
 // ]
 
 function printTodo(name, date) {
-
   const li = document.createElement('li');
   
   const ol = document.querySelector('.todo-list');
@@ -69,3 +68,32 @@ function printAllTodo() {
 
 printAllTodo();
 
+function addTodo(todo) {
+  todos.push([todo, false, getCurrentDateAndTime])
+}
+
+function removeTodo(i) {
+  todos.splice(i, 1)
+}
+
+const addButton = document.querySelector('.add-todo');
+
+addButton.addEventListener('click', inputTask);
+
+function inputTask() {
+  const userInput = document.querySelector('.todo-input').value;
+  
+  addTodo(userInput)
+
+  printTodo(userInput)
+}
+
+function clearList() {
+  const list = document.querySelector('.todo-list')
+
+  while(list.hasChildNodes()) {
+    list.firstChild.remove();
+  }
+}
+
+const completeButton = document.querySelector('.')

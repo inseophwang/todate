@@ -19,15 +19,34 @@ We're also going to implement the ability to just directly click on what we want
   * Then append that `li` to your ol like always and you're good to go! Our css will take care of the layout, though feel free to tinker with it. Or redo it entirely!
 * Now let's write a function that prints all our todos out to the dom. Remember to pass in both the name *and* the date. Our single-todo-printing function is expecting them!
 * Once you have both those functions, call the list-printing one and see if it displays our hard-coded data to the dom. If so, congrats!
+
+
+
+
 * Now write a helper function that will add one todo to our data. It should take in a task name and add it to our todos, along with a `false` value for its completeness (it's not done if it was just added!) and the result of a call to our helper function `getCurrentDateAndTime` for its date.
+
+
+
 * Next is a nice helper function to *remove* a todo from our data, given a specific index. Don't forget to remove it from other arrays if you're storing them that way!
 * 
+
+
+
+
+
 * Now our function for actually taking user input and making a task out of it. It should be pretty easy given our helper functions:
   * Grab the user's input.
   * Call your function to add that task to our data.
   * And call your function to print one task to the dom.
   * Add an event listener to run that whole thing when the user presses ADD, and try it out!
+
+
+
 * Write a helper function to clear the list. Don't just copy-paste from earlier work, though you can refer back to it while typing if you need to.
+
+
+
+
 * Now we need a helper function to mark a todo in our data complete, given an index. It only needs to handle those booleans!
 * Now a helper function that changes the style of the dom given an index. You can either adjust for the off-by-one error here or when the function is called, but make sure you do it somewhere!
 * Okay, we're ready to mark things complete. Set up an event listener to run our function. But that event listener needs to run when _any_ `li` is clicked... Where can we add it? When the todo is added to the dom! Add it to the paragraph tags we made for the todo name and date elements, way back where we were printing a todo on the dom.
