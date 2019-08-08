@@ -49,6 +49,11 @@ We're also going to implement the ability to just directly click on what we want
 
 * Now we need a helper function to mark a todo in our data complete, given an index. It only needs to handle those booleans!
 * Now a helper function that changes the style of the dom given an index. You can either adjust for the off-by-one error here or when the function is called, but make sure you do it somewhere!
+
+
+
+
+
 * Okay, we're ready to mark things complete. Set up an event listener to run our function. But that event listener needs to run when _any_ `li` is clicked... Where can we add it? When the todo is added to the dom! Add it to the paragraph tags we made for the todo name and date elements, way back where we were printing a todo on the dom.
 * Now for the function. How can we tell which li was clicked? Well, when our browser detects an event and calls the function we told it to call, it actually passes us in a thing called an `event` as a parameter. (You'll see the parameter called `e` in a lot of tutorials, but do you really need to save four letters? Call it whatever you want though, it's *your* parameter!) If we take it in as a parameter and look at `event.target`, we'll get the node element that the event acted upon; in this case, it's the paragraph element that was clicked. To get the li, so we can act upon it, we'll need to dig deeper and use `event.target.parentNode`. Now you've got the correct `li`!
 * Now we need its index so we can change it on the dom and in our data. One way to do this is to go back up to when we made the `li` and give it an `id`, which we can grab again now (making sure to convert it to a number, because all css values are strings in JavaScript). But if you want a harder challenge, you can grab all the children of our ol with `.childNodes`, convert it to an array with `Array.from`, and use `indexOf` to find the index of our `li` within that array.

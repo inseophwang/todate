@@ -19,7 +19,7 @@ let todos = [
     getCurrentDateAndTime(),
   ],
 ]
-
+// console.log(todos[1][1])
 // Or the ALTERNATE, multi-array method:
 // let todos = [
 //   `Be able to mark todos "done".`,
@@ -96,4 +96,7 @@ function clearList() {
   }
 }
 
-const completeButton = document.querySelector('.')
+function markComplete(number) {
+  todos[number - 1][1] = true;
+}
+
